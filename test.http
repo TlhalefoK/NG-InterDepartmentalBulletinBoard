@@ -1,0 +1,36 @@
+GET http://localhost:3000 HTTP/1.1
+###
+GET http://localhost:3000/test HTTP/1.1
+###
+###
+GET https://localhost:3000/api/bulletins HTTP/1.1
+###
+POST https://localhost:3000/api/bulletins HTTP/1.1
+Content-Type: application/json
+Authorization: 
+
+{
+    "title": "National Security Update",
+    "date": "2025-02-10",
+    "description": "A national briefing on current security measures and protocols."
+}
+###
+DELETE https://localhost:3000/api/bulletins/6712699827cfb1cc1dffcc52 HTTP/1.1
+###
+POST https://localhost:3000/api/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"test",
+    "password":"*****"
+}
+
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"test",
+    "password":"*****"
+}
+
